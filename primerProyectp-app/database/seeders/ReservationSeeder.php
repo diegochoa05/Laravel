@@ -16,9 +16,28 @@ class ReservationSeeder extends Seeder
     {
         $reservation = new Reservation();
 
-        $reservation->name = "Diego";
-        $reservation->phone_number = "6121111111";
-        $reservation->email="diego@gmail.com";
+        // $reservation->name = "Diego";
+        // $reservation->phone_number = "6121111111";
+        // $reservation->email="diego@gmail.com";
+        $reservation->client_id=2;
+        $reservation->date = '2022-10-27';
+        $reservation->price = 1836;
+        $reservation->category="Premium";
+        $reservation->method_payment = "cash";
+        $reservation->save();
+
+        $reservation = new Reservation();
+        $reservation->client_id=2;
+        $reservation->date = '2022-11-25';
+        $reservation->price = 1236;
+        $reservation->category="Normal";
+        $reservation->method_payment = "cash";
+        $reservation->save();
+
+        $reservation = new Reservation();
+        $reservation->client_id=2;
+        $reservation->date = '2022-12-15';
+        $reservation->price = 1536;
         $reservation->category="Premium";
         $reservation->method_payment = "cash";
         $reservation->save();

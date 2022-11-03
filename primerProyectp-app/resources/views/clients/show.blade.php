@@ -18,6 +18,9 @@
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Phone_number</th>
+                <td>
+                    Actions
+                </td>
             </tr>
 
         </thead>
@@ -37,6 +40,11 @@
                     </td>
                     <td>
                         {{ $client->phone_number }}
+                    </td>
+                    <td>
+                        <a href="{{ url(('/clients/edit/'.$client->id)) }}">
+                            Editar
+                        </a>
                     </td>
        
                 </tr>

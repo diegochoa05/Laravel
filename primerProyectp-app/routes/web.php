@@ -38,6 +38,14 @@ Route::get('suma/{num1}/{num2}/{num3?}', function($num1, $num2, $num3=0){
 
 // });
 
+Route::get('/login', function(){
+    return view('auth.login');
+})->name('login');
+
+Route::get('/prueba', function () {
+    return "Hola";
+})->middleware('auth');
+
 Route::get('users/', [UserController::class, 'index']);
 
 Route::get('users/create', [UserController::class, 'create']);
@@ -61,6 +69,8 @@ Route::put('clients', [ClientController::class, 'update']);
 Route::get('reservations/', [ReservationController::class, 'index']);
 
 Route::get('reservations/{id}', [ReservationController::class, 'show']);
+
+
 
 
 
